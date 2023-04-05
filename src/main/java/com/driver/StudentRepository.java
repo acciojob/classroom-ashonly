@@ -23,6 +23,10 @@ public class StudentRepository {
             List<String> teacher_list=student_teacherDB.get(teacher);
             teacher_list.add(student);
             student_teacherDB.put(teacher,teacher_list);
+        }else {
+            List<String> teacher_list = new ArrayList<>();
+            teacher_list.add(student);
+            student_teacherDB.put(teacher,teacher_list);
         }
     }
     public Student getStudentByName(String name){
